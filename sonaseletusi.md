@@ -1,4 +1,4 @@
-# Sõnaseletused
+# Sõnaseletused - Github käsud ja nupud eesti keeles 
 
 **Preview** – Näitab faili sisu või dokumentatsiooni mugavalt loetavana.
 
