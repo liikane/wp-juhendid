@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Markdown Cheat Sheet (EN)</title>
+  <style>
+    :root{
+      --bg:#0b1220; --card:#0f1a30; --text:#e8eefc; --muted:#a9b7d6;
+      --accent:#7aa2ff; --border:#243453; --codebg:#0a0f1c; --code:#d7e0ff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; padding:24px;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", sans-serif;
+      background:linear-gradient(180deg, var(--bg), #070b14);
+      color:var(--text);
+      line-height:1.55;
+    }
+    .wrap{max-width:980px; margin:0 auto}
+    header{
+      padding:18px 18px 10px;
+      background:rgba(255,255,255,0.03);
+      border:1px solid var(--border);
+      border-radius:18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      margin-bottom:18px;
+    }
+    h1{margin:0 0 6px; font-size:28px}
+    p{margin:8px 0; color:var(--muted)}
+    .grid{
+      display:grid; gap:14px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      margin-top:14px;
+    }
+    section{
+      background:rgba(255,255,255,0.03);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:16px 16px 10px;
+    }
+    section h2{
+      margin:0 0 10px; font-size:18px; letter-spacing:0.2px
+    }
+    section h3{
+      margin:14px 0 8px; font-size:15px; color:var(--text)
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .toc a{display:block; padding:3px 0}
+    pre{
+      margin:10px 0 14px;
+      background:var(--codebg);
+      border:1px solid rgba(122,162,255,0.25);
+      border-radius:14px;
+      padding:12px;
+      overflow:auto;
+    }
+    code{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      color:var(--code);
+      font-size:13px;
+    }
+    .note{
+      margin:10px 0 0;
+      padding:10px 12px;
+      background:rgba(122,162,255,0.08);
+      border:1px dashed rgba(122,162,255,0.35);
+      border-radius:14px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .pill{
+      display:inline-block;
+      padding:2px 10px;
+      border:1px solid rgba(122,162,255,0.35);
+      background:rgba(122,162,255,0.08);
+      border-radius:999px;
+      font-size:12px;
+      color:var(--muted);
+      margin-left:8px;
+      vertical-align:middle;
+    }
+    footer{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:12px;
+      text-align:center;
+    }
+    .hr{
+      height:1px; background:rgba(255,255,255,0.08);
+      margin:10px 0 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Markdown Cheat Sheet (English)</h1>
+      <p>A quick reference for common Markdown syntax plus popular “GitHub-flavored” extras. All examples are formatted in <strong>code</strong> style so you can copy/paste directly.</p>
+
+      <div class="grid toc">
+        <section>
+          <h2>Quick links</h2>
+          <a href="#headings">Headings</a>
+          <a href="#emphasis">Emphasis</a>
+          <a href="#lists">Lists</a>
+          <a href="#links">Links</a>
+          <a href="#images">Images</a>
+          <a href="#blockquotes">Blockquotes</a>
+          <a href="#code">Code</a>
+          <a href="#hr">Horizontal rules</a>
+          <a href="#tables">Tables</a>
+          <a href="#tasklists">Task lists</a>
+          <a href="#footnotes">Footnotes</a>
+          <a href="#anchors">Anchors / internal links</a>
+          <a href="#escaping">Escaping special characters</a>
+          <a href="#html">HTML in Markdown</a>
+          <a href="#tips">Practical tips</a>
+        </section>
+
+        <section>
+          <h2>Notes</h2>
+          <p class="note">
+            Some features (e.g., task lists, tables, footnotes) depend on the platform/renderer.
+            GitHub, GitLab and many wikis support “GFM” (GitHub Flavored Markdown) extensions.
+          </p>
+          <p class="note">
+            Line breaks: in most Markdown flavors, a newline inside a paragraph becomes a <em>soft</em> wrap.
+            For a <strong>hard</strong> line break, add two spaces at the end of the line.
+          </p>
+        </section>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section id="headings">
+        <h2>Headings <span class="pill">Basics</span></h2>
+        <pre><code># Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6</code></pre>
+        <div class="note">Tip: Always add a space after the <code>#</code> symbols.</div>
+      </section>
+
+      <section id="emphasis">
+        <h2>Emphasis <span class="pill">Basics</span></h2>
+
+        <h3>Italic, bold, strikethrough</h3>
+        <pre><code>*italic* or _italic_
+**bold** or __bold__
+~~strikethrough~~</code></pre>
+
+        <h3>Subscript &amp; superscript (platform-dependent)</h3>
+        <pre><code>H&lt;sub&gt;2&lt;/sub&gt;O (via HTML)
+x&lt;sup&gt;2&lt;/sup&gt; (via HTML)</code></pre>
+
+        <div class="note">Sub/superscript are not standard Markdown—use HTML where needed.</div>
+      </section>
+
+      <section id="lists">
+        <h2>Lists <span class="pill">Basics</span></h2>
+
+        <h3>Unordered list</h3>
+        <pre><code>- First item
+- Second item
+  - Nested item
+  - Another nested item
+- Third item</code></pre>
+
+        <h3>Ordered list</h3>
+        <pre><code>1. First item
+2. Second item
+3. Third item</code></pre>
+
+        <h3>Auto-numbered ordered list</h3>
+        <pre><code>1. First item
+1. Second item
+1. Third item</code></pre>
+
+        <div class="note">For nested lists, use indentation (e.g., 2 spaces or a tab) and keep it consistent.</div>
+      </section>
+
+      <section id="links">
+        <h2>Links <span class="pill">Basics</span></h2>
+
+        <h3>Inline link</h3>
+        <pre><code>[Microsoft](https://www.microsoft.com)</code></pre>
+
+        <h3>Link with a title (tooltip)</h3>
+        <pre><code>[Microsoft](https://www.microsoft.com "Official website")</code></pre>
+
+        <h3>Reference-style links</h3>
+        <pre><code>Here is a [link][ref1] and here is another [link][ref2].
+
+[ref1]: https://example.com
+[ref2]: https://example.org "Optional title"</code></pre>
+
+        <h3>Autolink (many renderers)</h3>
+        <pre><code>https://example.com</code></pre>
+      </section>
+
+      <section id="images">
+        <h2>Images <span class="pill">Basics</span></h2>
+
+        <h3>Basic syntax</h3>
+        <pre><code>![Alt text](https://example.com/image.png)</code></pre>
+
+        <h3>Image with a title</h3>
+        <pre><code>![Alt text](https://example.com/logo.png "My logo")</code></pre>
+
+        <h3>Image sizing (not standard; use HTML)</h3>
+        <pre><code>&lt;img src="https://example.com/image.png" alt="Alt text" width="240" /&gt;</code></pre>
+
+        <div class="note">If the platform doesn’t support sizing in Markdown, HTML is the most reliable option.</div>
+      </section>
+
+      <section id="blockquotes">
+        <h2>Blockquotes <span class="pill">Basics</span></h2>
+
+        <h3>Single-line quote</h3>
+        <pre><code>&gt; This is a quote.</code></pre>
+
+        <h3>Multi-line quote</h3>
+        <pre><code>&gt; First quoted line
+&gt; second quoted line
+&gt;
+&gt; New paragraph inside the quote</code></pre>
+
+        <h3>Quote with a list</h3>
+        <pre><code>&gt; Key points:
+&gt; - Point A
+&gt; - Point B</code></pre>
+      </section>
+
+      <section id="code">
+        <h2>Code <span class="pill">Basics</span></h2>
+
+        <h3>Inline code</h3>
+        <pre><code>Run `npm install` to install dependencies.</code></pre>
+
+        <h3>Fenced code block</h3>
+        <pre><code>```text
+This is a code block.
+Put commands, configuration, or output here.
+```</code></pre>
+
+        <h3>Syntax highlighting (language tag)</h3>
+        <pre><code>```js
+function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
+```</code></pre>
+
+        <h3>Indented code block (older style)</h3>
+        <pre><code>    This is a code block that starts with 4 spaces.
+    Use it if fenced code blocks are not supported.</code></pre>
+
+        <div class="note">If inline code contains backticks (<code>`</code>), wrap it using double or triple backticks.</div>
+      </section>
+
+      <section id="hr">
+        <h2>Horizontal rules <span class="pill">Basics</span></h2>
+        <pre><code>---</code></pre>
+        <pre><code>***</code></pre>
+        <pre><code>___</code></pre>
+        <div class="note">Keep a blank line around the rule to avoid unexpected parsing.</div>
+      </section>
+
+      <section id="tables">
+        <h2>Tables <span class="pill">GFM</span></h2>
+
+        <h3>Simple table</h3>
+        <pre><code>| Column A | Column B |
+|---------:|:---------|
+| Right aligned | Left aligned |
+| 123 | Text |</code></pre>
+
+        <div class="note">
+          Alignment: <code>:---</code> (left), <code>---:</code> (right), <code>:---:</code> (center).
+          Avoid very long code inside tables—use separate code blocks instead.
+        </div>
+      </section>
+
+      <section id="tasklists">
+        <h2>Task lists <span class="pill">GFM</span></h2>
+        <pre><code>- [ ] Incomplete task
+- [x] Completed task
+  - [ ] Subtask</code></pre>
+        <div class="note">Task lists work great in GitHub issues and pull request descriptions.</div>
+      </section>
+
+      <section id="footnotes">
+        <h2>Footnotes <span class="pill">Platform-dependent</span></h2>
+        <pre><code>This is a statement with a footnote.[^1]
+
+[^1]: This is the footnote text.</code></pre>
+        <div class="note">Not every Markdown engine supports footnotes. If it doesn’t work, use regular links instead.</div>
+      </section>
+
+      <section id="anchors">
+        <h2>Anchors / internal links <span class="pill">Practical</span></h2>
+
+        <h3>Link to a heading anchor (GitHub-style)</h3>
+        <pre><code>[Jump to Code](#code)</code></pre>
+
+        <h3>Manual anchor ID (via HTML)</h3>
+        <pre><code>&lt;a id="my-anchor"&gt;&lt;/a&gt;
+[Jump](#my-anchor)</code></pre>
+
+        <div class="note">Automatic heading IDs vary by platform (how it treats spaces, punctuation, and non-ASCII characters).</div>
+      </section>
+
+      <section id="escaping">
+        <h2>Escaping special characters <span class="pill">Basics</span></h2>
+
+        <h3>Escape Markdown characters with a backslash</h3>
+        <pre><code>\*This will not be italic\*
+\# This is not a heading
+\> This is not a quote</code></pre>
+
+        <h3>HTML entities (the most reliable)</h3>
+        <pre><code>&amp;lt;div&amp;gt;This looks like HTML, but it won't render as HTML.&amp;lt;/div&amp;gt;</code></pre>
+      </section>
+
+      <section id="html">
+        <h2>HTML in Markdown <span class="pill">Mixed mode</span></h2>
+
+        <h3>Hard line break (HTML)</h3>
+        <pre><code>First line&lt;br&gt;
+Second line</code></pre>
+
+        <h3>Centered text / custom layout (HTML)</h3>
+        <pre><code>&lt;div style="text-align:center"&gt;
+  &lt;strong&gt;Centered text&lt;/strong&gt;
+&lt;/div&gt;</code></pre>
+
+        <div class="note">Some platforms restrict HTML for security reasons (e.g., scripts, certain inline styles).</div>
+      </section>
+
+      <section id="tips">
+        <h2>Practical tips <span class="pill">Everyday</span></h2>
+
+        <h3>Hard line break inside a paragraph (two trailing spaces)</h3>
+        <pre><code>This is the first line␠␠
+This is the second line (same paragraph)</code></pre>
+
+        <h3>Paragraph inside a list item</h3>
+        <pre><code>- Item 1
+
+  This paragraph belongs to the same list item (indented).
+- Item 2</code></pre>
+
+        <h3>“Callout” style note (platform-dependent)</h3>
+        <pre><code>&gt; **Note:** This is important information.</code></pre>
+
+        <h3>Front matter (e.g., Jekyll, Hugo)</h3>
+        <pre><code>---
+title: "My document"
+date: 2026-04-10
+tags: [markdown, reference]
+---</code></pre>
+
+        <div class="note">
+          If you use a static-site generator, check which front matter format (YAML/TOML/JSON) it expects.
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="hr"></div>
+      <p>This is a standalone HTML file. Save it as <code>markdown-cheatsheet-en.html</code> and open it in your browser.</p>
+    </footer>
+  </div>
+</body>
+</html>
