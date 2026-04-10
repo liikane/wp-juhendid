@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="et">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Markdown Cheat Sheet (ET)</title>
+  <style>
+    :root{
+      --bg:#0b1220; --card:#0f1a30; --text:#e8eefc; --muted:#a9b7d6;
+      --accent:#7aa2ff; --border:#243453; --codebg:#0a0f1c; --code:#d7e0ff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; padding:24px;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", sans-serif;
+      background:linear-gradient(180deg, var(--bg), #070b14);
+      color:var(--text);
+      line-height:1.55;
+    }
+    .wrap{max-width:980px; margin:0 auto}
+    header{
+      padding:18px 18px 10px;
+      background:rgba(255,255,255,0.03);
+      border:1px solid var(--border);
+      border-radius:18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      margin-bottom:18px;
+    }
+    h1{margin:0 0 6px; font-size:28px}
+    p{margin:8px 0; color:var(--muted)}
+    .grid{
+      display:grid; gap:14px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      margin-top:14px;
+    }
+    section{
+      background:rgba(255,255,255,0.03);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:16px 16px 10px;
+    }
+    section h2{
+      margin:0 0 10px; font-size:18px; letter-spacing:0.2px
+    }
+    section h3{
+      margin:14px 0 8px; font-size:15px; color:var(--text)
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .toc a{display:block; padding:3px 0}
+    pre{
+      margin:10px 0 14px;
+      background:var(--codebg);
+      border:1px solid rgba(122,162,255,0.25);
+      border-radius:14px;
+      padding:12px;
+      overflow:auto;
+    }
+    code{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      color:var(--code);
+      font-size:13px;
+    }
+    .note{
+      margin:10px 0 0;
+      padding:10px 12px;
+      background:rgba(122,162,255,0.08);
+      border:1px dashed rgba(122,162,255,0.35);
+      border-radius:14px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .pill{
+      display:inline-block;
+      padding:2px 10px;
+      border:1px solid rgba(122,162,255,0.35);
+      background:rgba(122,162,255,0.08);
+      border-radius:999px;
+      font-size:12px;
+      color:var(--muted);
+      margin-left:8px;
+      vertical-align:middle;
+    }
+    footer{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:12px;
+      text-align:center;
+    }
+    .hr{
+      height:1px; background:rgba(255,255,255,0.08);
+      margin:10px 0 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Markdown Cheat Sheet (eesti keeles)</h1>
+      <p>Kiirjuhend Markdowni levinumate süntaksireeglite ja “GitHub-flavored” lisadega. Kõik näited on vormindatud <strong>code</strong>-stiilis, et saaksid need otse kopeerida.</p>
+      <div class="grid toc">
+        <section>
+          <h2>Kiirviited</h2>
+          <a href="#pealkirjad">Pealkirjad</a>
+          <a href="#rõhutused">Rõhutused</a>
+          <a href="#loendid">Loendid</a>
+          <a href="#lingid">Lingid</a>
+          <a href="#pildid">Pildid</a>
+          <a href="#tsitaadid">Tsitaadid</a>
+          <a href="#kood">Kood</a>
+          <a href="#horisontaaljoon">Horisontaaljoon</a>
+          <a href="#tabelid">Tabelid</a>
+          <a href="#ülesandeloend">Ülesandeloend</a>
+          <a href="#jalusemärkused">Jalusemärkused</a>
+          <a href="#ankrud">Ankrud</a>
+          <a href="#põgenemine">Erimärkide põgenemine</a>
+          <a href="#html">HTML Markdownis</a>
+          <a href="#praktilised">Praktilised nipid</a>
+        </section>
+
+        <section>
+          <h2>Märkused</h2>
+          <p class="note">
+            Mõned funktsioonid (nt ülesandeloend, tabelid, jalusemärkused) sõltuvad platvormist.
+            GitHub, GitLab ja paljud wiki-d toetavad “GFM” (GitHub Flavored Markdown) laiendusi.
+          </p>
+          <p class="note">
+            Reavahetus: enamikus Markdowni variantides tähendab “uus rida” sama lõigu sees
+            <em>pehmet</em> reavahetust. <strong>Kõva</strong> reavahetuse jaoks lisa rea lõppu kaks tühikut.
+          </p>
+        </section>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section id="pealkirjad">
+        <h2>Pealkirjad <span class="pill">Basics</span></h2>
+        <pre><code># Pealkiri 1
+## Pealkiri 2
+### Pealkiri 3
+#### Pealkiri 4
+##### Pealkiri 5
+###### Pealkiri 6</code></pre>
+        <div class="note">Nipp: jäta pealkirja ette alati vähemalt 1 tühik pärast <code>#</code>-märki.</div>
+      </section>
+
+      <section id="rõhutused">
+        <h2>Rõhutused <span class="pill">Basics</span></h2>
+
+        <h3>Kaldkiri, paks, läbikriipsutus</h3>
+        <pre><code>*kaldkiri* või _kaldkiri_
+**paks** või __paks__
+~~läbikriipsutatud~~</code></pre>
+
+        <h3>Üla- ja alamindeks (platvormist sõltuv)</h3>
+        <pre><code>H&lt;sub&gt;2&lt;/sub&gt;O (HTML-iga)
+x&lt;sup&gt;2&lt;/sup&gt; (HTML-iga)</code></pre>
+
+        <div class="note">Üla-/alamindeks ei ole standardne Markdown — kasuta vajadusel HTML-i.</div>
+      </section>
+
+      <section id="loendid">
+        <h2>Loendid <span class="pill">Basics</span></h2>
+
+        <h3>Järjestamata loend</h3>
+        <pre><code>- Esimene
+- Teine
+  - Alam-element
+  - Veel üks alam-element
+- Kolmas</code></pre>
+
+        <h3>Järjestatud loend</h3>
+        <pre><code>1. Esimene
+2. Teine
+3. Kolmas</code></pre>
+
+        <h3>Järjestatud loend automaatse nummerdusega</h3>
+        <pre><code>1. Esimene
+1. Teine
+1. Kolmas</code></pre>
+
+        <div class="note">Alamloendi jaoks kasuta taanet (nt 2 tühikut või tab), kuid hoia stiil järjepidev.</div>
+      </section>
+
+      <section id="lingid">
+        <h2>Lingid <span class="pill">Basics</span></h2>
+
+        <h3>In-line link</h3>
+        <pre><code>[Microsoft](https://www.microsoft.com)</code></pre>
+
+        <h3>Link koos pealkirjaga (tooltip)</h3>
+        <pre><code>[Microsoft](https://www.microsoft.com "Ametlik koduleht")</code></pre>
+
+        <h3>Viitelingid (reference-style)</h3>
+        <pre><code>Siin on [link][ref1] ja siin on teine [link][ref2].
+
+[ref1]: https://example.com
+[ref2]: https://example.org "Valikuline pealkiri"</code></pre>
+
+        <h3>URL “autolink” (paljudes variantides)</h3>
+        <pre><code>https://example.com</code></pre>
+      </section>
+
+      <section id="pildid">
+        <h2>Pildid <span class="pill">Basics</span></h2>
+
+        <h3>Põhisüntaks</h3>
+        <pre><code>![Alternatiivtekst](https://example.com/pilt.png)</code></pre>
+
+        <h3>Pilt koos pealkirjaga</h3>
+        <pre><code>![Logo](https://example.com/logo.png "Minu logo")</code></pre>
+
+        <h3>Pildi suurus (ei ole standardne; kasuta HTML-i)</h3>
+        <pre><code>&lt;img src="https://example.com/pilt.png" alt="Alternatiivtekst" width="240" /&gt;</code></pre>
+
+        <div class="note">Kui platvorm ei toeta pildi suurust Markdowniga, on HTML kõige kindlam.</div>
+      </section>
+
+      <section id="tsitaadid">
+        <h2>Tsitaadid <span class="pill">Basics</span></h2>
+
+        <h3>Üherealine tsitaat</h3>
+        <pre><code>&gt; See on tsitaat.</code></pre>
+
+        <h3>Mitmerealine tsitaat</h3>
+        <pre><code>&gt; Esimene rida tsitaadist
+&gt; teine rida tsitaadist
+&gt;
+&gt; Uus lõik tsitaadi sees</code></pre>
+
+        <h3>Tsitaat koos loendiga</h3>
+        <pre><code>&gt; Olulised punktid:
+&gt; - Punkt A
+&gt; - Punkt B</code></pre>
+      </section>
+
+      <section id="kood">
+        <h2>Kood <span class="pill">Basics</span></h2>
+
+        <h3>Inline-kood</h3>
+        <pre><code>Kasuta käsku `npm install` sõltuvuste paigaldamiseks.</code></pre>
+
+        <h3>Koodiplokk (fenced code block)</h3>
+        <pre><code>```text
+See on koodiplokk.
+Siia võid panna käsud, konfiguratsiooni vms.
+```</code></pre>
+
+        <h3>Süntaksi esiletõst (language tag)</h3>
+        <pre><code>```js
+function tervita(nimi) {
+  console.log(`Tere, ${nimi}!`);
+}
+```</code></pre>
+
+        <h3>Taandusega koodiplokk (vanem stiil)</h3>
+        <pre><code>    See on koodiplokk, mis algab 4 tühikuga.
+    Sobib, kui fenced-plokke ei toetata.</code></pre>
+
+        <div class="note">Kui koodi sees on tagurpidi-ülakoma (<code>`</code>), võid inline-koodi ümber panna ka topelt- või kolmik-backtickid.</div>
+      </section>
+
+      <section id="horisontaaljoon">
+        <h2>Horisontaaljoon <span class="pill">Basics</span></h2>
+        <pre><code>---</code></pre>
+        <pre><code>***</code></pre>
+        <pre><code>___</code></pre>
+        <div class="note">Joone ümber jäta tühi rida, et vältida ootamatuid tõlgendusi.</div>
+      </section>
+
+      <section id="tabelid">
+        <h2>Tabelid <span class="pill">GFM</span></h2>
+
+        <h3>Lihtne tabel</h3>
+        <pre><code>| Veerg A | Veerg B |
+|--------:|:--------|
+| Paremal joondus | Vasakul joondus |
+| 123 | Tekst |</code></pre>
+
+        <div class="note">
+          Joondus: <code>:---</code> (vasak), <code>---:</code> (parem), <code>:---:</code> (keskele).
+          Väldi pikka koodi tabelis — pigem kasuta eraldi koodiplokki.
+        </div>
+      </section>
+
+      <section id="ülesandeloend">
+        <h2>Ülesandeloend <span class="pill">GFM</span></h2>
+
+        <pre><code>- [ ] Tegemata ülesanne
+- [x] Tehtud ülesanne
+  - [ ] Alamülesanne</code></pre>
+
+        <div class="note">Ülesandeloendid töötavad hästi GitHubi issue’de ja PR-ide kirjeldustes.</div>
+      </section>
+
+      <section id="jalusemärkused">
+        <h2>Jalusemärkused <span class="pill">Platvormist sõltuv</span></h2>
+
+        <pre><code>Siin on väide koos viitega.[^1]
+
+[^1]: See on jalusemärkuse tekst.</code></pre>
+
+        <div class="note">Kõik Markdowni mootorid ei toeta jalusemärkusi. Kui ei tööta, kasuta tavalisi linke.</div>
+      </section>
+
+      <section id="ankrud">
+        <h2>Ankrud / siselingid <span class="pill">Praktiline</span></h2>
+
+        <h3>Link pealkirja ankrule (GitHubi stiilis)</h3>
+        <pre><code>[Mine sektsiooni “Kood” juurde](#kood)</code></pre>
+
+        <h3>Manuaalne ankru ID (HTML-iga)</h3>
+        <pre><code>&lt;a id="minu-ankur"&gt;&lt;/a&gt;
+[Hüppa siia](#minu-ankur)</code></pre>
+
+        <div class="note">Pealkirja automaatne ankru nimi sõltub platvormist (nt kuidas tühikuid ja täpitähti käsitletakse).</div>
+      </section>
+
+      <section id="põgenemine">
+        <h2>Erimärkide põgenemine <span class="pill">Basics</span></h2>
+
+        <h3>Markdowni erimärkide “põgenemine” kaldkriipsuga</h3>
+        <pre><code>\*See ei lähe kaldkirja\*
+\# See ei ole pealkiri
+\> See ei ole tsitaat</code></pre>
+
+        <h3>HTML-entity’d (kindel viis)</h3>
+        <pre><code>&amp;lt;div&amp;gt;See näeb välja nagu HTML, aga ei renderdu.&amp;lt;/div&amp;gt;</code></pre>
+      </section>
+
+      <section id="html">
+        <h2>HTML Markdownis <span class="pill">Segarežiim</span></h2>
+
+        <h3>Ridade murdmine (HTML)</h3>
+        <pre><code>Esimene rida&lt;br&gt;
+Teine rida</code></pre>
+
+        <h3>Keskjoondus / eripaigutus (HTML)</h3>
+        <pre><code>&lt;div style="text-align:center"&gt;
+  &lt;strong&gt;Keskel tekst&lt;/strong&gt;
+&lt;/div&gt;</code></pre>
+
+        <div class="note">Mõned platvormid piiravad HTML-i turvakaalutlustel (nt skriptid, inline-stiilid).</div>
+      </section>
+
+      <section id="praktilised">
+        <h2>Praktilised nipid <span class="pill">Igapäev</span></h2>
+
+        <h3>Reavahetus lõigu sees (kaks tühikut rea lõpus)</h3>
+        <pre><code>See on esimene rida␠␠
+See on teine rida (samasse lõiku)</code></pre>
+
+        <h3>Loendi sees lõik</h3>
+        <pre><code>- Punkt 1
+
+  See on sama loendi elemendi lõik (taandega).
+- Punkt 2</code></pre>
+
+        <h3>“Callout” stiilis märkus (platvormipõhine)</h3>
+        <pre><code>&gt; **Märkus:** See on oluline teave.</code></pre>
+
+        <h3>Dokumendi meta / esiosa (front matter) (nt Jekyll, Hugo)</h3>
+        <pre><code>---
+title: "Minu dokument"
+date: 2026-04-10
+tags: [markdown, juhend]
+---</code></pre>
+
+        <div class="note">
+          Kui kasutad seda staatilise saidi generaatoris, kontrolli, millist “front matter” formaati (YAML/TOML/JSON) see ootab.
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="hr"></div>
+      <p>Koosta/koopia: see on iseseisev HTML-fail. Salvesta nt nimega <code>markdown-cheatsheet-et.html</code> ja ava brauseris.</p>
+    </footer>
+  </div>
+</body>
+</html>
