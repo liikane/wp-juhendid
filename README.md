@@ -8,4 +8,4 @@ Siin on lihtsad näpunäited algajale, kuidas alustada Githubi kasutamist. Katse
 
 [Githubi inglisekeelsed käsud ja nupud eesti keeles](sonaseletusi.md)
 
-
+Loetelu on nähtaval ka Github Pages lehel. 
