@@ -1,0 +1,24 @@
+name: Automaatselt uuenda README faili
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Klooni repo
+        uses: actions/checkout@v4
+
+      - name: Käivita README genereerimise skript
+        run: bash generate_readme.sh
+
+      - name: Pushi uuendatud README
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add README.md
+          git commit -m "Automaatselt uuendatud failide loend [skip ci]" || echo "Pole midagi uuendada"
+          git push
