@@ -1,2 +1,2 @@
 # wp
-Testing site 
+Juhendite hoidla
