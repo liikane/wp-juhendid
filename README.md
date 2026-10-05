@@ -10,5 +10,6 @@ Loetelu on nähtav ka Github Pages lehel.
 - [README_HEADER.md](README_HEADER.md)
 - [lihtne_toovoog.md](lihtne_toovoog.md)
 - [sonaseletusi.md](sonaseletusi.md)
+- [wordpress-agent-skills.md](wordpress-agent-skills.md)
 - [Markdown_Cheat_sheet_ENG.html](Markdown_Cheat_sheet_ENG.html)
 - [Markdown_cheat_sheet_EST.html](Markdown_cheat_sheet_EST.html)
