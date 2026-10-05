@@ -38,7 +38,7 @@ README nimetab neli tüüpilist AI-assistendi viga WordPressi juures:
 
 ## 2. Hoidla anatoomia
 
-![Hoidla anatoomia](pildid/01-anatoomia.png)
+![Hoidla anatoomia](img/01-anatoomia.png)
 
 Vasakul hoidla tegelik failipuu, paremal ühe oskuse siseehitus. Neli sisutüüpi:
 
@@ -91,7 +91,7 @@ See viimane osa on kogu asja mõte: **`Verification` ja `Failure modes` on prots
 
 ## 3. Routing-voog
 
-![Routing-voog](pildid/02-routing.png)
+![Routing-voog](img/02-routing.png)
 
 Agent ei vali oskust juhuslikult. Voog on kahesammuline ja deterministlik.
 
@@ -453,7 +453,7 @@ Kui midagi kukub läbi, ei hakka agent oletama — `Failure modes / debugging` l
 
 ## 6. Elutsükkel ja hindamine
 
-![Oskuse elutsükkel](pildid/03-elutsukkel.png)
+![Oskuse elutsükkel](img/03-elutsukkel.png)
 
 `docs/authoring-guide.md` kirjeldab töövoogu **draft → harden → ship** kuues sammus, ja `docs/principles.md` annab viis põhimõtet:
 
@@ -500,7 +500,7 @@ Automaatne on ainult `node shared/scripts/validate-skills.mjs`, mis kontrollib o
 
 ## 7. Paigaldus
 
-![Paigaldus](pildid/04-paigaldus.png)
+![Paigaldus](img/04-paigaldus.png)
 
 ### A. Kiirtee — `npx skills add`
 
@@ -608,4 +608,4 @@ Kui projekt ei ole WordPressi koodibaas (nagu praegune `默认项目`), ei anna 
 
 ---
 
-*Dokument koostatud 5. oktoobril 2026. Kõik hoidla kohta käivad arvud ja failinimed on kontrollitud GitHubi API ja algfailide vastu. Illustreeriv PHP-kood jaotises 5C on minu koostatud näide, mis rakendab hoidla protseduuri — mitte hoidla sisu. Diagrammid pildikaustas `pildid/` on minu joonistatud (SVG + PNG), mitte hoidla materjalid.*
+*Dokument koostatud 5. oktoobril 2026. Kõik hoidla kohta käivad arvud ja failinimed on kontrollitud GitHubi API ja algfailide vastu. Illustreeriv PHP-kood jaotises 5C on minu koostatud näide, mis rakendab hoidla protseduuri — mitte hoidla sisu. Diagrammid pildikaustas `img/` on minu joonistatud (SVG + PNG), mitte hoidla materjalid.*
