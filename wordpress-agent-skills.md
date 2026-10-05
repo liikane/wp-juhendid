@@ -38,6 +38,8 @@ README nimetab neli tüüpilist AI-assistendi viga WordPressi juures:
 
 ## 2. Hoidla anatoomia
 
+![Hoidla anatoomia](pildid/01-anatoomia.png)
+
 Vasakul hoidla tegelik failipuu, paremal ühe oskuse siseehitus. Neli sisutüüpi:
 
 | Kaust | Sisu | Maht |
@@ -49,7 +51,7 @@ Vasakul hoidla tegelik failipuu, paremal ühe oskuse siseehitus. Neli sisutüüp
 
 ### Ühe oskuse siseehitus
 
-```text
+```
 skills/wp-plugin-development/
 ├── SKILL.md                    # 3 996 baiti — põhiprotseduur
 ├── references/                 # 6 faili — süvadokumentatsioon
@@ -78,7 +80,7 @@ compatibility: "Targets WordPress 7.0+ (PHP 7.4.0+). Filesystem-based agent with
 
 **Kohustuslikud jaotised** — sama järjekord kõigis oskustes:
 
-```text
+```
 When to use  →  Inputs required  →  Procedure
              →  Verification  →  Failure modes / debugging  →  Escalation
 ```
@@ -88,6 +90,8 @@ See viimane osa on kogu asja mõte: **`Verification` ja `Failure modes` on prots
 ---
 
 ## 3. Routing-voog
+
+![Routing-voog](pildid/02-routing.png)
 
 Agent ei vali oskust juhuslikult. Voog on kahesammuline ja deterministlik.
 
@@ -103,14 +107,14 @@ Skript prindib stdout-i **JSON-raporti**, mille skeem on lepinguna fikseeritud (
 
 `project.kind` on loend, mis katab kõik WordPressi hoidla liigid:
 
-```text
+```
 unknown · wp-plugin · wp-mu-plugin · wp-theme · wp-block-theme
 wp-block-plugin · wp-site · wp-core · gutenberg
 ```
 
 Kui mitu liiki sobivad, kehtib spetsiifilisuse järjekord:
 
-```text
+```
 gutenberg > wp-core > wp-site > wp-block-theme > wp-block-plugin > wp-theme > wp-plugin
 ```
 
@@ -147,6 +151,8 @@ Kõik 19 oskust, rühmitatult. Tulbad: oskus, mida õpetab, viitefaile, skripte.
 
 ### 4.1 Suunamine ja tuvastus
 
+*Arvud veergudes „Ref" ja „Skr" on `references/` Markdown-failide ja `scripts/` failide arv. ¹ `wp-project-triage` ainus viide on JSON-skeem `triage.schema.json`, mitte Markdown.*
+
 | Oskus | Mida õpetab | Ref | Skr |
 |---|---|:--:|:--:|
 | `wordpress-router` | Liigitab WordPressi hoidlad ja suunab õigesse töövoogu | 1 | – |
@@ -162,6 +168,8 @@ Kõik 19 oskust, rühmitatult. Tulbad: oskus, mida õpetab, viitefaile, skripte.
 | `wp-interactivity-api` | Esikülje interaktiivsus: `data-wp-*` direktiivid, store'id, hüdratsioon | 3 | – |
 | `wpds` | WordPressi disainisüsteem: komponendid, tokenid, mustrid | – | – |
 
+> `wpds` eeldab **WPDS MCP serverit** — ilma selleta jääb oskus kasutuks.
+
 ### 4.3 Pluginad, liidesed ja võimekused
 
 | Oskus | Mida õpetab | Ref | Skr |
@@ -171,6 +179,8 @@ Kõik 19 oskust, rühmitatult. Tulbad: oskus, mida õpetab, viitefaile, skripte.
 | `wp-abilities-api` | Võimekuspõhised õigused ja Abilities API registreerimine | 9 | – |
 | `wp-abilities-audit` | Auditeerib plugina REST-pinna ja pakub Abilities API registreeringuid | 3 | – |
 | `wp-abilities-verify` | Kontrollib registreeringuid deklareeritud annotatsioonide vastu | 6 | – |
+
+**`wp-abilities-verify` on kogu kogu kõige teravam oskus.** Selle tuum on *adversarial annotation correctness check*: kui `readonly: true` võimekus tegelikult **kirjutab** (läbi `$wpdb->update`, `update_option` või mitte-GET delegaadi), on see turva- ja kasutusprobleem — sest agent planeerib oma tegevust just nende annotatsioonide põhjal, mida ta sisse loeb. Oskus loeb callback'i koodi ja püüab need valed kinni. Oskusel on kaks töörežiimi: **staatiline** (ainult pluginakoodist, keskkonda pole vaja) ja **runtime** (nõuab jooksutatavat WordPressi).
 
 ### 4.4 Keskkond ja operatsioonid
 
@@ -183,11 +193,15 @@ Kõik 19 oskust, rühmitatult. Tulbad: oskus, mida õpetab, viitefaile, skripte.
 | `wp-performance` | Profileerimine, vahemälu, andmebaas, Server-Timing, Query Monitor | 10 | 1 |
 | `wp-phpstan` | PHPStan WordPressi projektides: konfiguratsioon, baselined, WP-spetsiifiline tüpiseerimine | 3 | 1 |
 
+> `blueprint` on ainus oskus, mille `SKILL.md` on **16 201 baiti** — kõik teised on 1,5–10 kB vahel. Selle sisu (schema-võtmed, sammud, ressursid, bundlid) on lihtsalt liiga tihe, et viidetesse jagada.
+
 ### 4.5 Väljaandmine ja nõuetele vastavus
 
 | Oskus | Mida õpetab | Ref | Skr |
 |---|---|:--:|:--:|
 | `wp-plugin-directory-guidelines` | WordPress.org-i 18 nõuet: GPL, nimetamine, kaubamärk, trialware | 3 | – |
+
+See oskus vastab ka siis, kui kasutaja ei maini sõna „guidelines" — näiteks küsimusele „miks mu plugin WordPress.org-ist tagasi lükati". Suurim viitefail kogu hoidlas on siin: `guideline-review-checklist.md`, 25 561 baiti.
 
 ---
 
@@ -196,6 +210,8 @@ Kõik 19 oskust, rühmitatult. Tulbad: oskus, mida õpetab, viitefaile, skripte.
 Kolmeosalise näite kaudu: (A) päris `SKILL.md` algus, (B) päris hindamisstsenaarium, (C) täielik läbiv näide, kuidas agent ühe ülesande lahendab.
 
 ### A. Päris `SKILL.md` tekst (katkend)
+
+`skills/wordpress-router/SKILL.md` algus, muutmata kujul:
 
 ```markdown
 # WordPress Router
@@ -247,6 +263,8 @@ Use this skill at the start of most WordPress tasks to:
   - "Is this intended to be a WordPress plugin, a theme (classic/block), or a full site repo?"
 ```
 
+Pange tähele `Escalation` jaotist: kui suunamine on ebaselge, küsib agent **täpselt ühe** küsimuse ja pakub kolm valikut. See on kavatsuslik — vähem küsimusi, täpsemad valikud.
+
 ### B. Päris hindamisstsenaarium (`eval/scenarios/plugin-add-settings-page.json`)
 
 ```json
@@ -278,9 +296,11 @@ Use this skill at the start of most WordPress tasks to:
 }
 ```
 
+See fail on ühtlasi **näidis sellest, mida üks stsenaarium peab sisaldama**: `name`, `skills`, `query`, `expected_behavior`, `success_criteria`. Reegel ütleb, et ilma vähemalt ühe sellise stsenaariumita uut oskust vastu ei võeta.
+
 ### C. Läbiv näide: kuidas agent päringu lahendab
 
-**Kasutaja ütleb:** *„Lisa mu pluginasse seadete leht: üks märkeruut ja üks tekstiväli. Pea silmas, et see on turvaline ja salvestub õigesti.”*
+**Kasutaja ütleb:** *„Lisa mu pluginasse seadete leht: üks märkeruut ja üks tekstiväli. Pea silmas, et see on turvaline ja salvestub õigesti."*
 
 **Samm 1 — liigitamine.** Agent käivitab triage-skripti. Väljund (lühendatud):
 
@@ -319,6 +339,7 @@ defined( 'ABSPATH' ) || exit;
 
 const NAIDIS_OPTION = 'naidis_settings';
 
+// 1) Registreeri säte koos sanitaarimise callback'iga.
 add_action( 'admin_init', 'naidis_register_settings' );
 function naidis_register_settings() {
 	register_setting(
@@ -338,6 +359,7 @@ function naidis_register_settings() {
 		'naidis-settings'
 	);
 
+	// 2) Märkeruut.
 	add_settings_field(
 		'naidis_enabled',
 		__( 'Luba funktsioon', 'naidis' ),
@@ -347,6 +369,7 @@ function naidis_register_settings() {
 		array( 'label_for' => 'naidis_enabled' )
 	);
 
+	// 3) Tekstiväli.
 	add_settings_field(
 		'naidis_label',
 		__( 'Silt', 'naidis' ),
@@ -357,6 +380,7 @@ function naidis_register_settings() {
 	);
 }
 
+// Sanitaarimine SISENDIL (security.md: sanitize on input, escape on output).
 function naidis_sanitize_settings( $input ) {
 	return array(
 		'enabled' => ! empty( $input['enabled'] ),
@@ -382,6 +406,7 @@ function naidis_field_text() {
 	);
 }
 
+// 4) Menüü-leht, ainult admin-kontekstis.
 add_action( 'admin_menu', 'naidis_add_settings_page' );
 function naidis_add_settings_page() {
 	add_options_page(
@@ -394,7 +419,7 @@ function naidis_add_settings_page() {
 }
 
 function naidis_render_settings_page() {
-	if ( ! current_user_can( 'manage_options' ) ) {
+	if ( ! current_user_can( 'manage_options' ) ) { // Õiguste kontroll.
 		wp_die( esc_html__( 'Sul puudub selleks õigus.', 'naidis' ) );
 	}
 	?>
@@ -402,6 +427,7 @@ function naidis_render_settings_page() {
 		<h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
 		<form action="options.php" method="post">
 			<?php
+			// 5) Nonce + õiguste kontroll (options.php lisab nonce'i välja).
 			settings_fields( 'naidis_settings_group' );
 			do_settings_sections( 'naidis-settings' );
 			submit_button();
@@ -427,6 +453,8 @@ Kui midagi kukub läbi, ei hakka agent oletama — `Failure modes / debugging` l
 
 ## 6. Elutsükkel ja hindamine
 
+![Oskuse elutsükkel](pildid/03-elutsukkel.png)
+
 `docs/authoring-guide.md` kirjeldab töövoogu **draft → harden → ship** kuues sammus, ja `docs/principles.md` annab viis põhimõtet:
 
 1. Eelista **väikeseid, kokkupandavaid** oskusi ühe „megaskill'i" asemel.
@@ -439,7 +467,7 @@ Kui midagi kukub läbi, ei hakka agent oletama — `Failure modes / debugging` l
 
 Oluline piirang, mida tuleb teada: hoidlas on 47 stsenaariumi, aga **automatiseeritud jooksutajat ei ole veel**. `docs/authoring-guide.md` ütleb selle otse välja:
 
-> *„Run the relevant scenarios manually and report the results in the pull request. This repository does not yet include an automated eval runner.”*
+> *„Run the relevant scenarios manually and report the results in the pull request. This repository does not yet include an automated eval runner."*
 
 Automaatne on ainult `node shared/scripts/validate-skills.mjs`, mis kontrollib oskuste metaandmeid ja triage-raporti skeemi. Stsenaariumid ise tuleb käsitsi läbi käia ja tulemused PR-is raporteerida.
 
@@ -466,11 +494,13 @@ Automaatne on ainult `node shared/scripts/validate-skills.mjs`, mis kontrollib o
 | `validate-skills.mjs` | Kontrollib metaandmeid ja triage-raportit |
 | `scaffold-skill.mjs` | Loob uue, spetsifikatsioonile vastava oskuse algfaili |
 | `update-upstream-indices.mjs` | Uuendab WP/Gutenbergi versiooni-indekseid |
-| `ai-generate-updates.mjs` | AI-abiga hooldusvoog |
+| `ai-generate-updates.mjs` | AI-abiga hooldusvoog (12 665 B) |
 
 ---
 
 ## 7. Paigaldus
+
+![Paigaldus](pildid/04-paigaldus.png)
 
 ### A. Kiirtee — `npx skills add`
 
@@ -505,6 +535,8 @@ node shared/scripts/skillpack-install.mjs --dest=../your-wp-project \
   --targets=codex,vscode,claude,cursor
 ```
 
+Lisavalikud: `--list` (nimekiri), `--dry-run` (eelvaade ilma paigaldamata), `--skills=` (osaline valik).
+
 ### C. Käsitsi
 
 Kopeeri oskuse kaust oma assistendi juhiste-kausta. Oskused on ainult Markdown ja paar `.mjs` faili — neid saab ka lihtsalt lugeda ja oma vajadustele kohandada.
@@ -524,7 +556,7 @@ Kopeeri oskuse kaust oma assistendi juhiste-kausta. Oskused on ainult Markdown j
 |---|---|
 | WordPress | 7.0+ |
 | PHP | 7.4.0+ |
-| Playground CLI | Node.js 20.18+ |
+| Playground CLI | Node.js 20.18+ (jooksutab WordPressi WebAssembly'is, SQLite-iga) |
 | `wp-env` | Docker + Node.js 18.12+ |
 | `wpds` | WPDS MCP server |
 | `wp-phpstan` | Composer-põhine PHPStan |
@@ -538,7 +570,7 @@ Kopeeri oskuse kaust oma assistendi juhiste-kausta. Oskused on ainult Markdown j
 
 Hoidla on selles osas eeskujulikult läbipaistev. README ütleb otse:
 
-> *„These skills were generated using GPT-5.2 Codex (High Reasoning) from official Gutenberg and WordPress documentation, then reviewed and edited by WordPress contributors. We tested skills with AI assistants and iterated based on results. This is v1…”*
+> *„These skills were generated using GPT-5.2 Codex (High Reasoning) from official Gutenberg and WordPress documentation, then reviewed and edited by WordPress contributors. We tested skills with AI assistants and iterated based on results. This is v1…"*
 
 Üksikasjad on failis `docs/ai-authorship.md`. Lühidalt: **sisu on masinaga loodud, inimeste poolt üle vaadatud ja testitud.**
 
@@ -576,4 +608,4 @@ Kui projekt ei ole WordPressi koodibaas (nagu praegune `默认项目`), ei anna 
 
 ---
 
-*Dokument koostatud 5. oktoobril 2026. Kõik hoidla kohta käivad arvud ja failinimed on kontrollitud GitHubi API ja algfailide vastu. Illustreeriv PHP-kood jaotises 5C on minu koostatud näide, mis rakendab hoidla protseduuri — mitte hoidla sisu.*
+*Dokument koostatud 5. oktoobril 2026. Kõik hoidla kohta käivad arvud ja failinimed on kontrollitud GitHubi API ja algfailide vastu. Illustreeriv PHP-kood jaotises 5C on minu koostatud näide, mis rakendab hoidla protseduuri — mitte hoidla sisu. Diagrammid pildikaustas `pildid/` on minu joonistatud (SVG + PNG), mitte hoidla materjalid.*
