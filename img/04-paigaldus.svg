@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820">
+  <rect width="1200" height="820" fill="#ffffff"/>
+
+  <text x="48" y="56" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#1d2327">Paigaldus: kolm teed, neli sihtkohta</text>
+  <text x="48" y="86" font-family="Segoe UI, Arial, sans-serif" font-size="15.5" fill="#50575e">Ametlikult toetatud viisid oskuste viimiseks oma projekti või kasutajaprofiili</text>
+  <line x1="48" y1="104" x2="1152" y2="104" stroke="#dcdcde" stroke-width="1"/>
+
+  <!-- Path A -->
+  <rect x="48" y="128" width="352" height="330" rx="10" fill="#f0f6fc" stroke="#2271b1" stroke-width="1.5"/>
+  <text x="72" y="160" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#135e96">A. Kiirtee (npx)</text>
+  <text x="72" y="182" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#50575e">Kõige kiirem viis üksiku oskuse jaoks</text>
+  <line x1="72" y1="196" x2="376" y2="196" stroke="#b3d3ee" stroke-width="1"/>
+  <rect x="64" y="210" width="320" height="86" rx="6" fill="#ffffff" stroke="#c3c4c7" stroke-width="1"/>
+  <g font-family="Consolas, monospace" font-size="11.5" fill="#1d2327">
+    <text x="76" y="232">npx skills add WordPress/agent-skills</text>
+    <text x="76" y="252">  --skill wp-plugin-development</text>
+    <text x="76" y="276">npx skills add ... --list</text>
+  </g>
+  <text x="72" y="322" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">Ilma liputa paigaldab projektipõhiselt;</text>
+  <text x="72" y="342" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">lipuga <tspan font-family="Consolas, monospace" font-weight="700">-g / --global</tspan> kasutajaprofiili.</text>
+  <text x="72" y="374" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">Sobib, kui tahad ühte või paari oskust</text>
+  <text x="72" y="394" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">proovida, ilma kogu koguga sidumata.</text>
+  <text x="72" y="428" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#646970" font-style="italic">Nõuab võrguühendust ja npx-i.</text>
+
+  <!-- Path B -->
+  <rect x="424" y="128" width="352" height="330" rx="10" fill="#f6f7f7" stroke="#c3c4c7" stroke-width="1.5"/>
+  <text x="448" y="160" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#1d2327">B. Kogu hoidla (skillpack)</text>
+  <text x="448" y="182" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#50575e">Kõik oskused korraga, sihitud kaustadesse</text>
+  <line x1="448" y1="196" x2="752" y2="196" stroke="#dcdcde" stroke-width="1"/>
+  <rect x="440" y="210" width="320" height="106" rx="6" fill="#ffffff" stroke="#c3c4c7" stroke-width="1"/>
+  <g font-family="Consolas, monospace" font-size="11.5" fill="#1d2327">
+    <text x="452" y="232">git clone .../agent-skills.git</text>
+    <text x="452" y="252">node shared/scripts/</text>
+    <text x="452" y="268">  skillpack-build.mjs --clean</text>
+    <text x="452" y="292">node shared/scripts/</text>
+    <text x="452" y="308">  skillpack-install.mjs --global</text>
+  </g>
+  <text x="448" y="342" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">Sihid: <tspan font-family="Consolas, monospace">--targets=</tspan></text>
+  <text x="448" y="362" font-family="Consolas, monospace" font-size="11.5" fill="#50575e">codex, vscode, claude, cursor, antigravity</text>
+  <text x="448" y="392" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">Võimaldab ka <tspan font-family="Consolas, monospace">--dry-run</tspan> eelvaadet,</text>
+  <text x="448" y="412" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">osade oskuste valikut ja sihtkausta.</text>
+  <text x="448" y="440" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#646970" font-style="italic">Kõige paindlikum tee.</text>
+
+  <!-- Path C -->
+  <rect x="800" y="128" width="352" height="330" rx="10" fill="#f6f7f7" stroke="#c3c4c7" stroke-width="1.5"/>
+  <text x="824" y="160" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#1d2327">C. Käsitsi kopeerimine</text>
+  <text x="824" y="182" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#50575e">Ilma tööriistadeta, täielik kontroll</text>
+  <line x1="824" y1="196" x2="1128" y2="196" stroke="#dcdcde" stroke-width="1"/>
+  <text x="824" y="226" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">Kopeeri oskuse kaust oma assistendi</text>
+  <text x="824" y="246" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">juhiste-kausta. Oskused on lihtsalt</text>
+  <text x="824" y="266" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">Markdown-failid, seega sobivad need</text>
+  <text x="824" y="286" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">ka käsitsi lugemiseks ja kohandamiseks.</text>
+  <rect x="816" y="310" width="320" height="106" rx="6" fill="#ffffff" stroke="#c3c4c7" stroke-width="1"/>
+  <g font-family="Consolas, monospace" font-size="11.5" fill="#1d2327">
+    <text x="828" y="334">skills/wp-plugin-development/</text>
+    <text x="828" y="356">  SKILL.md</text>
+    <text x="828" y="378">  references/*.md</text>
+    <text x="828" y="400">  scripts/*.mjs</text>
+  </g>
+  <text x="824" y="440" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#646970" font-style="italic">Uuendusi ei tule automaatselt.</text>
+
+  <!-- Scope comparison -->
+  <rect x="48" y="484" width="1104" height="182" rx="10" fill="#fdf6e3" stroke="#dba617" stroke-width="1.5"/>
+  <text x="72" y="514" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#8a6100">Kaks skoopi — ja konflikti reegel</text>
+  <line x1="72" y1="528" x2="1128" y2="528" stroke="#f0d9a0" stroke-width="1"/>
+
+  <text x="72" y="556" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1d2327">Globaalne skoop</text>
+  <text x="72" y="580" font-family="Consolas, monospace" font-size="12.5" fill="#50575e">~/.claude/skills/ · ~/.cursor/skills/</text>
+  <text x="72" y="604" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">Saadaval kõigis projektides, üks kord seadistada. Sobib üksikarendajale,</text>
+  <text x="72" y="624" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">kes tahab WordPressi teadmisi igas repos.</text>
+
+  <line x1="620" y1="544" x2="620" y2="648" stroke="#f0d9a0" stroke-width="1"/>
+
+  <text x="648" y="556" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1d2327">Projektipõhine skoop</text>
+  <text x="648" y="580" font-family="Consolas, monospace" font-size="12.5" fill="#50575e">.claude/skills/ · .github/skills/ · .cursor/skills/</text>
+  <text x="648" y="604" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">Saadaval ainult selles repos, aga versioonihalduses — kogu tiim saab kasu.</text>
+  <text x="648" y="624" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">Kui oskus on mõlemas skoobis, võidab projektipõhine versioon.</text>
+
+  <!-- Requirements -->
+  <rect x="48" y="686" width="1104" height="102" rx="9" fill="#ffffff" stroke="#c3c4c7" stroke-width="1.5"/>
+  <text x="72" y="714" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#1d2327">Nõuded ja litsents</text>
+  <text x="72" y="740" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">WordPress 7.0+ ja PHP 7.4.0+ · Playground CLI vajab Node.js 20.18+ · wp-env vajab Dockerit ja Node.js 18.12+ · wpds vajab WPDS MCP serverit</text>
+  <text x="72" y="764" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">Litsents: GPL-2.0-or-later · Haru: trunk · Autorid: WordPressi kaastöötajad (AI-abiga loodud, inimeste poolt üle vaadatud)</text>
+</svg>
