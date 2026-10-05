@@ -1,14 +1,33 @@
-# Githubi ja Markdowni juhendite hoidla
+# WordPress Agent Skills – juhend ja kokkuvõte
 
-Siin on lihtsad näpunäited algajale, kuidas alustada Githubi kasutamist. Katsetasin kõike enda peal ja veendusin, et kõik need nipid töötavad.
+See hoidlaga on kogutud ja salvestatud struktureeritud ülevaade WordPressi agent-skills süsteemist.
 
-Loetelu on nähtav ka Github Pages lehel.
+## Allikad
 
+- Originaalne hoidlaks: https://github.com/WordPress/agent-skills
+- Dokument: [wordpress-agent-skills.md](./wordpress-agent-skills.md)
 
-### Failid:
-- [GITHUB_ALUSTAJA_JUHEND.md](GITHUB_ALUSTAJA_JUHEND.md)
-- [README_HEADER.md](README_HEADER.md)
-- [lihtne_toovoog.md](lihtne_toovoog.md)
-- [sonaseletusi.md](sonaseletusi.md)
-- [Markdown_Cheat_sheet_ENG.html](Markdown_Cheat_sheet_ENG.html)
-- [Markdown_cheat_sheet_EST.html](Markdown_cheat_sheet_EST.html)
+## Mis siin on?
+
+See repo sisaldab dokumenti, mis selgitab:
+
+- mida `WordPress/agent-skills` hoidlaks on;
+- kuidas agent-oskused töötavad;
+- milliseid oskusi olemas on;
+- kuidas triage/routing protsess töötab;
+- kuidas agent WordPressi ülesannet lahendab;
+- milliseid hindamisstsenaariume ja juhiseid hoidlaks sisaldab.
+
+## Miks see oluline on?
+
+Dokument annab ülevaate sellest, kuidas AI assistent saab struktureeritud WordPressi teadmistega töötada: lühidalt, deterministlikult ja kontrollitavalt. See ei ole plugina install, vaid knowledge package, mis aitab kasutada õigesti WordPressi arendustööriistu, hooke, Settings API-d, block-developmenti, performance ja security reegleid.
+
+## Dokument
+
+Vaata täielikku materjali siin:
+
+- [wordpress-agent-skills.md](./wordpress-agent-skills.md)
+
+## Lisateave
+
+Kui soovid rohkem uurida, siis võta aluseks originaalhoidla README ja oskused: https://github.com/WordPress/agent-skills
