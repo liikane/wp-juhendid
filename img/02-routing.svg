@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="920" viewBox="0 0 1200 920">
+  <rect width="1200" height="920" fill="#ffffff"/>
+
+  <text x="48" y="56" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#1d2327">Routing-voog: kuidas agent oskuseni jõuab</text>
+  <text x="48" y="86" font-family="Segoe UI, Arial, sans-serif" font-size="15.5" fill="#50575e">wordpress-router liigitab hoidla → wp-project-triage annab JSON-faktid → domeeni-oskus teeb töö</text>
+  <line x1="48" y1="104" x2="1152" y2="104" stroke="#dcdcde" stroke-width="1"/>
+
+  <!-- Step 1 -->
+  <rect x="48" y="130" width="512" height="116" rx="9" fill="#f0f6fc" stroke="#2271b1" stroke-width="1.5"/>
+  <circle cx="86" cy="170" r="17" fill="#2271b1"/>
+  <text x="86" y="177" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="118" y="176" font-family="Consolas, monospace" font-size="16" font-weight="700" fill="#135e96">wordpress-router</text>
+  <text x="72" y="206" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" fill="#1d2327">Otsustab, millise WordPressi hoidlaga on tegu ja milline</text>
+  <text x="72" y="228" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" fill="#1d2327">töövoog kehtib. Loeb references/decision-tree.md.</text>
+
+  <!-- Arrow 1->2 -->
+  <line x1="560" y1="188" x2="624" y2="188" stroke="#8c8f94" stroke-width="2"/>
+  <polygon points="624,183 636,188 624,193" fill="#8c8f94"/>
+
+  <!-- Step 2 -->
+  <rect x="640" y="130" width="512" height="116" rx="9" fill="#f0f6fc" stroke="#2271b1" stroke-width="1.5"/>
+  <circle cx="678" cy="170" r="17" fill="#2271b1"/>
+  <text x="678" y="177" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="710" y="176" font-family="Consolas, monospace" font-size="16" font-weight="700" fill="#135e96">wp-project-triage</text>
+  <text x="664" y="206" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" fill="#1d2327">Käivitab detect_wp_project.mjs ja väljastab JSON-i:</text>
+  <text x="664" y="228" font-family="Consolas, monospace" font-size="12.5" fill="#50575e">project.kind · signals · tooling · version hints</text>
+
+  <!-- Down arrow -->
+  <line x1="896" y1="246" x2="896" y2="292" stroke="#8c8f94" stroke-width="2"/>
+  <polygon points="891,292 896,304 901,292" fill="#8c8f94"/>
+
+  <!-- Step 3 -->
+  <rect x="48" y="318" width="800" height="128" rx="9" fill="#f6f7f7" stroke="#c3c4c7" stroke-width="1.5"/>
+  <circle cx="86" cy="352" r="17" fill="#50575e"/>
+  <text x="86" y="359" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="118" y="358" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#1d2327">Liigitus tuvastatud signaalide põhjal</text>
+  <text x="72" y="386" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1d2327">Projekti liik: plugin / teema / plokiteema / WP core / täissait</text>
+  <text x="72" y="408" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1d2327">Tööriistad: Composer, @wordpress/scripts, PHPUnit, Playwright, wp-env</text>
+  <text x="72" y="430" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1d2327">Versioonivihjed ja testide olemasolu. <tspan font-family="Consolas, monospace" font-weight="700">kind: unknown</tspan> korral vaadatakse juurfailid üle.</text>
+
+  <!-- Side note -->
+  <rect x="872" y="318" width="280" height="128" rx="8" fill="#fdf6e3" stroke="#dba617" stroke-width="1.5"/>
+  <text x="892" y="346" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#8a6100">Eraldi rada</text>
+  <text x="892" y="370" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#1d2327">wp-plugin-directory-guidelines</text>
+  <text x="892" y="392" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#1d2327">18 WordPress.org-i nõuet:</text>
+  <text x="892" y="412" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#1d2327">GPL, nimetamine, trialware,</text>
+  <text x="892" y="432" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#1d2327">kaubamärgireeglid.</text>
+
+  <!-- Fan-out arrows -->
+  <line x1="262" y1="446" x2="262" y2="494" stroke="#2271b1" stroke-width="2"/>
+  <line x1="600" y1="446" x2="600" y2="494" stroke="#2271b1" stroke-width="2"/>
+  <line x1="938" y1="446" x2="938" y2="494" stroke="#2271b1" stroke-width="2"/>
+  <polygon points="257,494 262,506 267,494" fill="#2271b1"/>
+  <polygon points="595,494 600,506 605,494" fill="#2271b1"/>
+  <polygon points="933,494 938,506 943,494" fill="#2271b1"/>
+
+  <!-- Column 1 -->
+  <rect x="48" y="518" width="392" height="246" rx="9" fill="#ffffff" stroke="#8c8f94" stroke-width="1.5"/>
+  <text x="70" y="548" font-family="Segoe UI, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#135e96">Sisu ja esikülg</text>
+  <line x1="70" y1="560" x2="418" y2="560" stroke="#dcdcde" stroke-width="1"/>
+  <g font-family="Consolas, monospace" font-size="13.5" fill="#1d2327">
+    <text x="70" y="588">wp-block-development</text>
+    <text x="70" y="616">wp-block-themes</text>
+    <text x="70" y="644">wp-patterns</text>
+    <text x="70" y="672">wp-interactivity-api</text>
+    <text x="70" y="700">wpds</text>
+  </g>
+  <text x="70" y="732" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#646970">block.json, theme.json, mustrid,</text>
+  <text x="70" y="752" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#646970">data-wp-* direktiivid, disainisüsteem</text>
+
+  <!-- Column 2 -->
+  <rect x="452" y="518" width="392" height="246" rx="9" fill="#ffffff" stroke="#8c8f94" stroke-width="1.5"/>
+  <text x="474" y="548" font-family="Segoe UI, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#135e96">Server ja liidesed</text>
+  <line x1="474" y1="560" x2="822" y2="560" stroke="#dcdcde" stroke-width="1"/>
+  <g font-family="Consolas, monospace" font-size="13.5" fill="#1d2327">
+    <text x="474" y="588">wp-plugin-development</text>
+    <text x="474" y="616">wp-rest-api</text>
+    <text x="474" y="644">wp-abilities-api</text>
+    <text x="474" y="672">wp-abilities-audit</text>
+    <text x="474" y="700">wp-abilities-verify</text>
+  </g>
+  <text x="474" y="732" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#646970">konksud, Settings API, turvalisus,</text>
+  <text x="474" y="752" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#646970">REST-marsruudid, võimekuste audit</text>
+
+  <!-- Column 3 -->
+  <rect x="856" y="518" width="296" height="246" rx="9" fill="#ffffff" stroke="#8c8f94" stroke-width="1.5"/>
+  <text x="878" y="548" font-family="Segoe UI, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#135e96">Keskkond ja ops</text>
+  <line x1="878" y1="560" x2="1130" y2="560" stroke="#dcdcde" stroke-width="1"/>
+  <g font-family="Consolas, monospace" font-size="13.5" fill="#1d2327">
+    <text x="878" y="588">wp-playground</text>
+    <text x="878" y="616">blueprint</text>
+    <text x="878" y="644">wp-env</text>
+    <text x="878" y="672">wp-wpcli-and-ops</text>
+    <text x="878" y="700">wp-performance</text>
+    <text x="878" y="728">wp-phpstan</text>
+  </g>
+
+  <!-- Bottom band -->
+  <rect x="48" y="790" width="1104" height="106" rx="9" fill="#edf7ed" stroke="#00a32a" stroke-width="1.5"/>
+  <text x="72" y="820" font-family="Segoe UI, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#007017">Kontrollikiht — iga oskuse lahutamatu osa</text>
+  <text x="72" y="848" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1d2327">Iga SKILL.md lõpeb jaotistega <tspan font-family="Consolas, monospace" font-weight="700">Verification</tspan> ja <tspan font-family="Consolas, monospace" font-weight="700">Failure modes / debugging</tspan>.</text>
+  <text x="72" y="874" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1d2327">Töö loetakse lõppenuks alles siis, kui need punktid on päriselt läbi kontrollitud — mitte siis, kui kood on kirjutatud.</text>
+</svg>

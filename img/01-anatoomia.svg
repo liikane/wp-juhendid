@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="948" viewBox="0 0 1280 948">
+  <rect width="1280" height="948" fill="#ffffff"/>
+
+  <text x="48" y="58" font-family="Segoe UI, Arial, sans-serif" font-size="31" font-weight="700" fill="#1d2327">WordPress/agent-skills — hoidla anatoomia</text>
+  <text x="48" y="90" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#50575e">19 oskust · 86 süvadokumenti (references) · 7 deterministlikku skripti · 47 hindamisstsenaariumi · haru trunk</text>
+  <line x1="48" y1="110" x2="1232" y2="110" stroke="#dcdcde" stroke-width="1"/>
+
+  <!-- LEFT PANEL: file tree -->
+  <rect x="40" y="132" width="470" height="690" rx="10" fill="#f6f7f7" stroke="#dcdcde" stroke-width="1"/>
+  <text x="64" y="166" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#1d2327">Hoidla failipuu</text>
+  <line x1="64" y1="180" x2="486" y2="180" stroke="#dcdcde" stroke-width="1"/>
+
+  <g font-family="Consolas, monospace" font-size="13" fill="#1d2327">
+    <text x="64" y="208">agent-skills/</text>
+    <text x="64" y="230">├── README.md</text>
+    <text x="64" y="252">├── LICENSE</text>
+    <text x="64" y="274">├── CONTRIBUTING.md</text>
+    <text x="64" y="296" font-weight="700">├── skills/          &lt;-- 19 oskust</text>
+    <text x="64" y="318">│   ├── wordpress-router</text>
+    <text x="64" y="340">│   ├── wp-project-triage</text>
+    <text x="64" y="362">│   ├── wp-block-development</text>
+    <text x="64" y="384">│   ├── wp-block-themes</text>
+    <text x="64" y="406">│   ├── wp-plugin-development</text>
+    <text x="64" y="428">│   ├── wp-rest-api</text>
+    <text x="64" y="450">│   ├── wp-interactivity-api</text>
+    <text x="64" y="472">│   ├── wp-abilities-api</text>
+    <text x="64" y="494">│   ├── wp-abilities-audit</text>
+    <text x="64" y="516">│   ├── wp-abilities-verify</text>
+    <text x="64" y="538">│   ├── wp-patterns</text>
+    <text x="64" y="560">│   ├── wpds</text>
+    <text x="64" y="582">│   ├── wp-wpcli-and-ops</text>
+    <text x="64" y="604">│   ├── wp-performance</text>
+    <text x="64" y="626">│   ├── wp-phpstan</text>
+    <text x="64" y="648">│   ├── wp-playground</text>
+    <text x="64" y="670">│   ├── wp-env</text>
+    <text x="64" y="692">│   ├── blueprint</text>
+    <text x="64" y="714">│   └── wp-plugin-directory-...</text>
+    <text x="64" y="744" font-weight="700">├── shared/</text>
+    <text x="64" y="766">│   ├── scripts/     build, install, validate</text>
+    <text x="64" y="788">│   └── references/  versiooni-indeksid</text>
+    <text x="64" y="810" font-weight="700">├── eval/scenarios/  47 JSON-stsenaariumit</text>
+  </g>
+
+  <!-- annotations column -->
+  <g font-family="Consolas, monospace" font-size="12" fill="#50575e">
+    <text x="330" y="362">10 viidet + 1 skript</text>
+    <text x="330" y="384">6 viidet + 1 skript</text>
+    <text x="330" y="406">6 viidet + 1 skript</text>
+    <text x="330" y="428">6 viidet</text>
+    <text x="330" y="450">3 viidet</text>
+    <text x="330" y="472">9 viidet</text>
+    <text x="330" y="494">3 viidet</text>
+    <text x="330" y="516">6 viidet</text>
+    <text x="330" y="538">7 viidet</text>
+    <text x="330" y="560">nõuab WPDS MCP-d</text>
+    <text x="330" y="582">7 viidet + 1 skript</text>
+    <text x="330" y="604">10 viidet + 1 skript</text>
+    <text x="330" y="626">3 viidet + 1 skript</text>
+    <text x="330" y="648">6 viidet</text>
+    <text x="330" y="670">2 konfiguratsioonifaili</text>
+    <text x="330" y="692">ainus suur SKILL.md (16 kB)</text>
+  </g>
+
+  <!-- RIGHT PANEL: one skill zoomed -->
+  <rect x="540" y="132" width="700" height="690" rx="10" fill="#ffffff" stroke="#c3c4c7" stroke-width="1.5"/>
+  <text x="566" y="166" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#1d2327">Ühe oskuse sisu (suurendus)</text>
+  <text x="566" y="188" font-family="Consolas, monospace" font-size="13" fill="#2271b1">skills/wp-plugin-development/</text>
+  <line x1="566" y1="202" x2="1214" y2="202" stroke="#dcdcde" stroke-width="1"/>
+
+  <!-- Card A: SKILL.md -->
+  <rect x="566" y="220" width="648" height="178" rx="8" fill="#f0f6fc" stroke="#2271b1" stroke-width="1.5"/>
+  <text x="590" y="252" font-family="Consolas, monospace" font-size="16" font-weight="700" fill="#135e96">SKILL.md</text>
+  <text x="700" y="252" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#50575e">3 996 baiti — hoitakse meelega lühike</text>
+  <line x1="590" y1="266" x2="1190" y2="266" stroke="#b3d3ee" stroke-width="1"/>
+  <text x="590" y="292" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" fill="#1d2327">Frontmatter: <tspan font-family="Consolas, monospace" font-weight="700">name</tspan> · <tspan font-family="Consolas, monospace" font-weight="700">description</tspan> · <tspan font-family="Consolas, monospace" font-weight="700">compatibility</tspan></text>
+  <text x="590" y="320" font-family="Segoe UI, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1d2327">Kohustuslikud jaotised:</text>
+  <g font-family="Consolas, monospace" font-size="13" fill="#1d2327">
+    <text x="590" y="346">When to use  -&gt;  Inputs required  -&gt;  Procedure</text>
+    <text x="590" y="372">-&gt;  Verification  -&gt;  Failure modes / debugging  -&gt;  Escalation</text>
+  </g>
+
+  <!-- Card B: references -->
+  <rect x="566" y="414" width="648" height="188" rx="8" fill="#f6f7f7" stroke="#c3c4c7" stroke-width="1.5"/>
+  <text x="590" y="446" font-family="Consolas, monospace" font-size="16" font-weight="700" fill="#1d2327">references/</text>
+  <text x="746" y="446" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#50575e">6 faili — üks teema faili kohta</text>
+  <line x1="590" y1="460" x2="1190" y2="460" stroke="#dcdcde" stroke-width="1"/>
+  <g font-family="Consolas, monospace" font-size="13.5" fill="#1d2327">
+    <text x="590" y="488">structure.md        lifecycle.md</text>
+    <text x="590" y="514">settings-api.md     security.md</text>
+    <text x="590" y="540">data-and-cron.md    debugging.md</text>
+  </g>
+  <text x="590" y="572" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#646970" font-style="italic">Viited hoitakse ühe hüppe kaugusel SKILL.md-st — sügavaid ahelaid ei lubata.</text>
+  <text x="590" y="592" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#646970" font-style="italic">Viide laetakse ainult siis, kui ülesanne seda päriselt puudutab.</text>
+
+  <!-- Card C: scripts -->
+  <rect x="566" y="618" width="648" height="178" rx="8" fill="#edf7ed" stroke="#00a32a" stroke-width="1.5"/>
+  <text x="590" y="650" font-family="Consolas, monospace" font-size="16" font-weight="700" fill="#007017">scripts/</text>
+  <text x="700" y="650" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#50575e">valikuline — ainult kui usaldusväärsus seda nõuab</text>
+  <line x1="590" y1="664" x2="1190" y2="664" stroke="#b8e0b8" stroke-width="1"/>
+  <text x="590" y="692" font-family="Consolas, monospace" font-size="13.5" fill="#1d2327">detect_plugins.mjs</text>
+  <text x="590" y="718" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1d2327">Deterministlik tuvastus selle asemel, et agent oletaks.</text>
+  <text x="590" y="744" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1d2327">7 skripti kokku: tuvastus, versioonikontroll, lint/testide avastus.</text>
+  <text x="590" y="774" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#646970" font-style="italic">Skript prindib stdout-i masinloetava tulemuse, mille agent peab ära kasutama.</text>
+
+  <!-- Bottom strip -->
+  <rect x="40" y="848" width="1200" height="80" rx="9" fill="#fdf6e3" stroke="#dba617" stroke-width="1.5"/>
+  <text x="64" y="878" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#8a6100">Neli sisutüüpi, üks eesmärk</text>
+  <text x="64" y="902" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1d2327">oskused (skills/) · deterministlikud abivahendid (shared/scripts/) · hindamine (eval/scenarios/) · dokumentatsioon (docs/)</text>
+  <text x="64" y="920" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#1d2327">Kõik selleks, et agent järgiks kirjeldatud protseduuri, mitte ei oletaks.</text>
+</svg>

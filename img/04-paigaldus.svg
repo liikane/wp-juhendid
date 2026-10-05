@@ -76,6 +76,8 @@
   <text x="648" y="604" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">Saadaval ainult selles repos, aga versioonihalduses — kogu tiim saab kasu.</text>
   <text x="648" y="624" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">Kui oskus on mõlemas skoobis, võidab projektipõhine versioon.</text>
 
+  <rect x="648" y="636" width="480" height="0" fill="none"/>
+
   <!-- Requirements -->
   <rect x="48" y="686" width="1104" height="102" rx="9" fill="#ffffff" stroke="#c3c4c7" stroke-width="1.5"/>
   <text x="72" y="714" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#1d2327">Nõuded ja litsents</text>

@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1050" viewBox="0 0 1200 1050">
+  <rect width="1200" height="1050" fill="#ffffff"/>
+
+  <text x="48" y="56" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#1d2327">Oskuse elutsükkel ja hindamine</text>
+  <text x="48" y="86" font-family="Segoe UI, Arial, sans-serif" font-size="15.5" fill="#50575e">Iga uus oskus peab läbima kuus sammu ja kaasa tooma vähemalt ühe hindamisstsenaariumi</text>
+  <line x1="48" y1="104" x2="1152" y2="104" stroke="#dcdcde" stroke-width="1"/>
+
+  <!-- Row 1 -->
+  <rect x="48" y="128" width="352" height="150" rx="9" fill="#f0f6fc" stroke="#2271b1" stroke-width="1.5"/>
+  <circle cx="76" cy="158" r="15" fill="#2271b1"/>
+  <text x="76" y="164" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="102" y="163" font-family="Segoe UI, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#135e96">Route first</text>
+  <text x="70" y="192" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">Alusta wordpress-routerist: liigita</text>
+  <text x="70" y="212" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">hoidla ja vali domeen, enne kui</text>
+  <text x="70" y="232" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">midagi kirjutad.</text>
+  <text x="70" y="260" font-family="Consolas, monospace" font-size="11.5" fill="#50575e">skills/wordpress-router/</text>
+
+  <rect x="424" y="128" width="352" height="150" rx="9" fill="#f0f6fc" stroke="#2271b1" stroke-width="1.5"/>
+  <circle cx="452" cy="158" r="15" fill="#2271b1"/>
+  <text x="452" y="164" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="478" y="163" font-family="Segoe UI, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#135e96">Kogu sisendid</text>
+  <text x="446" y="192" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">Triage'i JSON-väljund · sihitud</text>
+  <text x="446" y="212" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">WP/PHP/Node versioonid · olemasolev</text>
+  <text x="446" y="232" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">tööriistade tugi.</text>
+  <text x="446" y="260" font-family="Consolas, monospace" font-size="11.5" fill="#50575e">detect_wp_project.mjs väljund</text>
+
+  <rect x="800" y="128" width="352" height="150" rx="9" fill="#f0f6fc" stroke="#2271b1" stroke-width="1.5"/>
+  <circle cx="828" cy="158" r="15" fill="#2271b1"/>
+  <text x="828" y="164" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="854" y="163" font-family="Segoe UI, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#135e96">Kirjuta SKILL.md</text>
+  <text x="822" y="192" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">Protseduur kontrollnimekirjana,</text>
+  <text x="822" y="212" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">kohustuslikud jaotised Verification</text>
+  <text x="822" y="232" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">ja Failure modes. Hoia lühike.</text>
+  <text x="822" y="260" font-family="Consolas, monospace" font-size="11.5" fill="#50575e">skills/&lt;nimi&gt;/SKILL.md</text>
+
+  <!-- Row 2 -->
+  <rect x="48" y="300" width="352" height="150" rx="9" fill="#edf7ed" stroke="#00a32a" stroke-width="1.5"/>
+  <circle cx="76" cy="330" r="15" fill="#00a32a"/>
+  <text x="76" y="336" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+  <text x="102" y="335" font-family="Segoe UI, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#007017">Lisa deterministlik abivahend</text>
+  <text x="70" y="364" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">Kui oskus sõltub tuvastusest (versioonid,</text>
+  <text x="70" y="384" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">paigutus, build-süsteem), lisa skript —</text>
+  <text x="70" y="404" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">ära lase agenti oletada.</text>
+  <text x="70" y="432" font-family="Consolas, monospace" font-size="11.5" fill="#50575e">skills/&lt;nimi&gt;/scripts/*.mjs</text>
+
+  <rect x="424" y="300" width="352" height="150" rx="9" fill="#edf7ed" stroke="#00a32a" stroke-width="1.5"/>
+  <circle cx="452" cy="330" r="15" fill="#00a32a"/>
+  <text x="452" y="336" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+  <text x="478" y="335" font-family="Segoe UI, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#007017">Lisa hindamisstsenaarium</text>
+  <text x="446" y="364" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">Vähemalt üks JSON-fail, mis kirjeldab</text>
+  <text x="446" y="384" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">oodatud käitumist ja õnnestumise</text>
+  <text x="446" y="404" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">kriteeriume. Reegel on kohustuslik.</text>
+  <text x="446" y="432" font-family="Consolas, monospace" font-size="11.5" fill="#50575e">eval/scenarios/&lt;slug&gt;.json</text>
+
+  <rect x="800" y="300" width="352" height="150" rx="9" fill="#edf7ed" stroke="#00a32a" stroke-width="1.5"/>
+  <circle cx="828" cy="330" r="15" fill="#00a32a"/>
+  <text x="828" y="336" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">6</text>
+  <text x="854" y="335" font-family="Segoe UI, Arial, sans-serif" font-size="14.5" font-weight="700" fill="#007017">Kontrolli</text>
+  <text x="822" y="364" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">validate-skills.mjs kontrollib metaandmeid</text>
+  <text x="822" y="384" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">ja triage-raportit. Stsenaariumid jooksuta</text>
+  <text x="822" y="404" font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">käsitsi ja raporteeri tulemus PR-is.</text>
+  <text x="822" y="432" font-family="Consolas, monospace" font-size="11.5" fill="#50575e">shared/scripts/validate-skills.mjs</text>
+
+  <!-- Bottom panel -->
+  <rect x="48" y="482" width="1104" height="520" rx="10" fill="#f6f7f7" stroke="#c3c4c7" stroke-width="1.5"/>
+  <text x="72" y="516" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#1d2327">Hindamisstsenaariumi ülesehitus</text>
+  <text x="72" y="540" font-family="Consolas, monospace" font-size="12.5" fill="#2271b1">eval/scenarios/plugin-add-settings-page.json</text>
+  <line x1="72" y1="556" x2="1128" y2="556" stroke="#dcdcde" stroke-width="1"/>
+
+  <g font-family="Consolas, monospace" font-size="12.5" fill="#1d2327">
+    <text x="72" y="590">{</text>
+    <text x="72" y="618">  "name": "Add a settings page with</text>
+    <text x="72" y="640">           Settings API",</text>
+    <text x="72" y="668">  "skills": ["wordpress-router",</text>
+    <text x="72" y="690">             "wp-project-triage",</text>
+    <text x="72" y="712">             "wp-plugin-development"],</text>
+    <text x="72" y="740">  "query": "Add a new plugin setting</text>
+    <text x="72" y="762">            (checkbox + text field) ...",</text>
+    <text x="72" y="790">  "expected_behavior": [ 10 sammu ],</text>
+    <text x="72" y="818">  "success_criteria": [ 6 tingimust ]</text>
+    <text x="72" y="846">}</text>
+  </g>
+
+  <line x1="500" y1="576" x2="500" y2="870" stroke="#dcdcde" stroke-width="1"/>
+
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="12.5" fill="#1d2327">
+    <text x="528" y="590" font-weight="700" fill="#135e96">Väljad</text>
+    <text x="528" y="622" font-family="Consolas, monospace" font-weight="700">name</text>
+    <text x="600" y="622">— stsenaariumi lühinimi</text>
+    <text x="528" y="650" font-family="Consolas, monospace" font-weight="700">skills</text>
+    <text x="600" y="650">— milliseid oskusi see katsetab</text>
+    <text x="528" y="678" font-family="Consolas, monospace" font-weight="700">query</text>
+    <text x="600" y="678">— kasutaja päring, nagu see päriselt tuleb</text>
+    <text x="528" y="706" font-family="Consolas, monospace" font-weight="700">expected_behavior</text>
+    <text x="528" y="728">— samm-sammult oodatud protseduur</text>
+    <text x="528" y="756" font-family="Consolas, monospace" font-weight="700">success_criteria</text>
+    <text x="528" y="778">— kontrollitavad lõpptulemuse tingimused</text>
+  </g>
+
+  <rect x="528" y="800" width="600" height="182" rx="8" fill="#ffffff" stroke="#2271b1" stroke-width="1.5"/>
+  <text x="550" y="828" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#135e96">Selle stsenaariumi success_criteria</text>
+  <line x1="550" y1="840" x2="1106" y2="840" stroke="#b3d3ee" stroke-width="1"/>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#1d2327">
+    <text x="550" y="864">1. Kasutab Settings API-t (register_setting, add_settings_field)</text>
+    <text x="550" y="886">2. Sisaldab sanitize_callback'i sisendi valideerimiseks</text>
+    <text x="550" y="908">3. Nonce on olemas ja seda kontrollitakse</text>
+    <text x="550" y="930">4. Õiguste kontroll on rakendatud</text>
+    <text x="550" y="952">5. Väljund on korrektselt esc'itud</text>
+    <text x="550" y="974">6. Seaded salvestuvad ja laaditakse õigesti</text>
+  </g>
+</svg>
