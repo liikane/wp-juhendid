@@ -38,7 +38,7 @@ README nimetab neli tüüpilist AI-assistendi viga WordPressi juures:
 
 ## 2. Hoidla anatoomia
 
-![Hoidla anatoomia](pildid/01-anatoomia.png)
+![Hoidla anatoomia](https://raw.githubusercontent.com/liikane/wp-juhendid/main/img/wordpress-agent-skills-01.png)
 
 Vasakul hoidla tegelik failipuu, paremal ühe oskuse siseehitus. Neli sisutüüpi:
 
@@ -91,7 +91,7 @@ See viimane osa on kogu asja mõte: **`Verification` ja `Failure modes` on prots
 
 ## 3. Routing-voog
 
-![Routing-voog](pildid/02-routing.png)
+![Routing-voog](https://raw.githubusercontent.com/liikane/wp-juhendid/main/img/wordpress-agent-skills-02.png)
 
 Agent ei vali oskust juhuslikult. Voog on kahesammuline ja deterministlik.
 
@@ -453,7 +453,7 @@ Kui midagi kukub läbi, ei hakka agent oletama — `Failure modes / debugging` l
 
 ## 6. Elutsükkel ja hindamine
 
-![Oskuse elutsükkel](pildid/03-elutsukkel.png)
+![Oskuse elutsükkel](https://raw.githubusercontent.com/liikane/wp-juhendid/main/img/wordpress-agent-skills-03.png)
 
 `docs/authoring-guide.md` kirjeldab töövoogu **draft → harden → ship** kuues sammus, ja `docs/principles.md` annab viis põhimõtet:
 
@@ -500,7 +500,7 @@ Automaatne on ainult `node shared/scripts/validate-skills.mjs`, mis kontrollib o
 
 ## 7. Paigaldus
 
-![Paigaldus](pildid/04-paigaldus.png)
+![Paigaldus](https://raw.githubusercontent.com/liikane/wp-juhendid/main/img/wordpress-agent-skills-04.png)
 
 ### A. Kiirtee — `npx skills add`
 
