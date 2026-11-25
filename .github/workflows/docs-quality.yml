@@ -1,0 +1,21 @@
+name: Documentation quality
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run link checker tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Check local documentation links
+        run: python3 tools/check_links.py
