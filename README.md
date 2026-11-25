@@ -7,7 +7,7 @@ Loetelu on nähtav ka Github Pages lehel.
 
 ### Failid:
 - [GITHUB_ALUSTAJA_JUHEND.md](GITHUB_ALUSTAJA_JUHEND.md)
-- [README_HEADER.md](README_HEADER.md)
+- [LINK_CHECKING.md](LINK_CHECKING.md)
 - [lihtne_toovoog.md](lihtne_toovoog.md)
 - [sonaseletusi.md](sonaseletusi.md)
 - [wordpress-agent-skills.md](wordpress-agent-skills.md)
