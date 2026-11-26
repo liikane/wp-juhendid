@@ -10,6 +10,7 @@ Loetelu on nähtav ka Github Pages lehel.
 - [LINK_CHECKING.md](LINK_CHECKING.md)
 - [lihtne_toovoog.md](lihtne_toovoog.md)
 - [sonaseletusi.md](sonaseletusi.md)
+- [COPILOT-WORDPRESS-TOOVOOG.md](COPILOT-WORDPRESS-TOOVOOG.md)
 - [wordpress-agent-skills.md](wordpress-agent-skills.md)
 - [Markdown_Cheat_sheet_ENG.html](Markdown_Cheat_sheet_ENG.html)
 - [Markdown_cheat_sheet_EST.html](Markdown_cheat_sheet_EST.html)
